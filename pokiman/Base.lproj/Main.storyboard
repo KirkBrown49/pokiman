@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter a pokimon to get information" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xW5-0d-DWi">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="                   Enter a pokemon to get information" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="xW5-0d-DWi">
                                 <rect key="frame" x="0.0" y="181" width="375" height="486"/>
                                 <color key="backgroundColor" red="0.99705451730000005" green="0.65650752050000005" blue="0.13313396499999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" red="0.26348792599999998" green="0.40797145600000001" blue="0.70639605319999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -28,8 +28,8 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="Iaj-HS-7UZ">
                                 <rect key="frame" x="129" y="45" width="117" height="111"/>
                                 <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="pokimon name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tQO-ZJ-qDK">
-                                        <rect key="frame" x="0.5" y="0.0" width="116" height="30"/>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="pokemon name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tQO-ZJ-qDK">
+                                        <rect key="frame" x="0.0" y="0.0" width="117" height="30"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
