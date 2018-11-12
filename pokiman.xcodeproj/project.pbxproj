@@ -12,9 +12,11 @@
 		465E570A2199DFA900A5710E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 465E57082199DFA900A5710E /* Main.storyboard */; };
 		465E570C2199DFAC00A5710E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 465E570B2199DFAC00A5710E /* Assets.xcassets */; };
 		465E570F2199DFAC00A5710E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 465E570D2199DFAC00A5710E /* LaunchScreen.storyboard */; };
+		B68E432ECE5B2A9BE6B620B2 /* Pods_pokiman.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5B7B183C9B14603138E1E7B2 /* Pods_pokiman.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		132D3CF2B0238098C86C5937 /* Pods-pokiman.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pokiman.release.xcconfig"; path = "Pods/Target Support Files/Pods-pokiman/Pods-pokiman.release.xcconfig"; sourceTree = "<group>"; };
 		465E57012199DFA900A5710E /* pokiman.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pokiman.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		465E57042199DFA900A5710E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		465E57062199DFA900A5710E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +24,8 @@
 		465E570B2199DFAC00A5710E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		465E570E2199DFAC00A5710E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		465E57102199DFAC00A5710E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5B7B183C9B14603138E1E7B2 /* Pods_pokiman.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pokiman.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8C71C2D59FD5CD77761F0964 /* Pods-pokiman.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pokiman.debug.xcconfig"; path = "Pods/Target Support Files/Pods-pokiman/Pods-pokiman.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +33,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B68E432ECE5B2A9BE6B620B2 /* Pods_pokiman.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		428D36E7254135AFD0A55941 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				5B7B183C9B14603138E1E7B2 /* Pods_pokiman.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		465E56F82199DFA900A5710E = {
 			isa = PBXGroup;
 			children = (
 				465E57032199DFA900A5710E /* pokiman */,
 				465E57022199DFA900A5710E /* Products */,
+				641433E3C7F5D6D4D45B277F /* Pods */,
+				428D36E7254135AFD0A55941 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +79,15 @@
 			path = pokiman;
 			sourceTree = "<group>";
 		};
+		641433E3C7F5D6D4D45B277F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				8C71C2D59FD5CD77761F0964 /* Pods-pokiman.debug.xcconfig */,
+				132D3CF2B0238098C86C5937 /* Pods-pokiman.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 465E57132199DFAC00A5710E /* Build configuration list for PBXNativeTarget "pokiman" */;
 			buildPhases = (
+				BB07C6CB903624AA3DE61A1C /* [CP] Check Pods Manifest.lock */,
 				465E56FD2199DFA900A5710E /* Sources */,
 				465E56FE2199DFA900A5710E /* Frameworks */,
 				465E56FF2199DFA900A5710E /* Resources */,
+				2F29FD5538D2D0EC0E182F89 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,6 +155,47 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2F29FD5538D2D0EC0E182F89 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-pokiman/Pods-pokiman-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-pokiman/Pods-pokiman-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BB07C6CB903624AA3DE61A1C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-pokiman-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		465E56FD2199DFA900A5710E /* Sources */ = {
@@ -280,6 +347,7 @@
 		};
 		465E57142199DFAC00A5710E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8C71C2D59FD5CD77761F0964 /* Pods-pokiman.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -297,6 +365,7 @@
 		};
 		465E57152199DFAC00A5710E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 132D3CF2B0238098C86C5937 /* Pods-pokiman.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
