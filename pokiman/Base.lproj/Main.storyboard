@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="                   Enter a pokemon to get information" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="xW5-0d-DWi">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter a pokemon to get information" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xW5-0d-DWi">
                                 <rect key="frame" x="0.0" y="181" width="375" height="486"/>
                                 <color key="backgroundColor" red="0.99705451730000005" green="0.65650752050000005" blue="0.13313396499999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" red="0.26348792599999998" green="0.40797145600000001" blue="0.70639605319999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -51,6 +51,10 @@
                                     </button>
                                 </subviews>
                             </stackView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y2t-0J-TaI">
+                                <rect key="frame" x="67" y="341" width="240" height="120"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.26348792599999998" green="0.40797145600000001" blue="0.70639605319999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
@@ -71,6 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
     </scenes>
 </document>

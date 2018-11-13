@@ -45,7 +45,7 @@ class ViewController: UIViewController {
             switch response.result {
             case .success(let value):
                 let json = JSON(value)
-                self.infoTextView.text = json.rawString()
+                self.infoTextView.text = json["name"].stringValue
             case .failure(let error):
                 self.infoTextView.text = "Invalid selection entered or an error occured.Please try again!"
                 print(error.localizedDescription)
