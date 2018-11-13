@@ -9,12 +9,16 @@
 import UIKit
 import Alamofire
 import SwiftyJSON
-
+import SDWebImage
 class ViewController: UIViewController {
     // outlets for storyBoard
     @IBOutlet weak var pokimonNameTextField: UITextField!
     @IBOutlet weak var infoTextView: UITextView!
-     let pokiApIBaseURL = "https://pokeapi.co/api/v2/pokemon/"
+    @IBOutlet weak var pokeImage: UIImageView!
+    
+    // base url for the pokimon api
+    var pokiApIBaseURL = "https://pokeapi.co/api/v2/pokemon/"
+
     override func viewDidLoad() {
         // base url for the pokimon api
       
@@ -35,8 +39,10 @@ class ViewController: UIViewController {
         //clearing the text field
         pokimonNameTextField.text = ""
         
+       
         //replacing spaces in name with + so it can be used as part of the url
         let pokiNameURLComponent = pokiName.replacingOccurrences(of: " ", with: "")
+       
         
         //building our complete request url with name
         let requestURL = pokiApIBaseURL + pokiNameURLComponent + "/"
@@ -46,6 +52,11 @@ class ViewController: UIViewController {
             case .success(let value):
                 let json = JSON(value)
                 self.infoTextView.text = json["name"].stringValue
+                if let spriteURL = json["sprites"]["front_default"].string {
+                    if let url = URL(string: spriteURL) {
+                        self.pokeImage.sd_setImage(with: url, completed: nil)
+                    }
+                }
             case .failure(let error):
                 self.infoTextView.text = "Invalid selection entered or an error occured.Please try again!"
                 print(error.localizedDescription)
