@@ -19,23 +19,23 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Enter a pokemon to get information" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="xW5-0d-DWi">
-                                <rect key="frame" x="0.0" y="227" width="375" height="440"/>
+                                <rect key="frame" x="0.0" y="171" width="375" height="496"/>
                                 <color key="backgroundColor" red="0.99705451730000005" green="0.65650752050000005" blue="0.13313396499999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <color key="textColor" red="0.26348792599999998" green="0.40797145600000001" blue="0.70639605319999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="51" translatesAutoresizingMaskIntoConstraints="NO" id="Iaj-HS-7UZ">
-                                <rect key="frame" x="129" y="45" width="117" height="157"/>
+                                <rect key="frame" x="127" y="45" width="121" height="111"/>
                                 <subviews>
                                     <textField opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="249" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="pokemon name" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tQO-ZJ-qDK">
-                                        <rect key="frame" x="0.0" y="0.0" width="117" height="76"/>
+                                        <rect key="frame" x="0.5" y="0.0" width="120" height="30"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QW6-v3-7pc">
-                                        <rect key="frame" x="35" y="127" width="47" height="30"/>
+                                        <rect key="frame" x="37" y="81" width="47" height="30"/>
                                         <color key="backgroundColor" red="0.99705451730000005" green="0.65650752050000005" blue="0.13313396499999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <state key="normal" title="submit">
                                             <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -52,26 +52,41 @@
                                 </subviews>
                             </stackView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Y2t-0J-TaI">
-                                <rect key="frame" x="75" y="341" width="225" height="120"/>
+                                <rect key="frame" x="75" y="306.5" width="225" height="225"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="120" id="sun-4s-W6G"/>
+                                    <constraint firstAttribute="width" constant="225" id="1ZV-CW-3Qz"/>
+                                    <constraint firstAttribute="width" secondItem="Y2t-0J-TaI" secondAttribute="height" multiplier="1:1" id="DZT-JK-Z5w"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JUT-c6-tgF">
+                                <rect key="frame" x="295" y="126" width="64" height="30"/>
+                                <color key="backgroundColor" red="0.99705451730000005" green="0.65650752050000005" blue="0.13313396499999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <state key="normal" title="Pokemon">
+                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="13"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="nrM-yV-Nml" kind="presentation" id="QPK-gB-sN9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.26348792599999998" green="0.40797145600000001" blue="0.70639605319999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
-                            <constraint firstItem="xW5-0d-DWi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4I0-8A-cDm"/>
-                            <constraint firstItem="Iaj-HS-7UZ" firstAttribute="centerX" secondItem="xW5-0d-DWi" secondAttribute="centerX" id="BPx-Ax-J4a"/>
-                            <constraint firstItem="Y2t-0J-TaI" firstAttribute="centerX" secondItem="Iaj-HS-7UZ" secondAttribute="centerX" id="Cqh-aU-TU8"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Y2t-0J-TaI" secondAttribute="bottom" constant="206" id="ORb-8A-oU5"/>
-                            <constraint firstItem="Y2t-0J-TaI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="PIr-88-2Jm"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Y2t-0J-TaI" secondAttribute="bottom" constant="206" id="Z0e-rP-G0I"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xW5-0d-DWi" secondAttribute="bottom" id="cSY-hr-CoW"/>
-                            <constraint firstItem="xW5-0d-DWi" firstAttribute="top" secondItem="Iaj-HS-7UZ" secondAttribute="bottom" constant="25" id="cdd-3S-uiZ"/>
-                            <constraint firstItem="Y2t-0J-TaI" firstAttribute="top" secondItem="Iaj-HS-7UZ" secondAttribute="bottom" constant="139" id="fCa-QV-Ejp"/>
-                            <constraint firstItem="Iaj-HS-7UZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="ivB-fT-oBU"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xW5-0d-DWi" secondAttribute="trailing" id="r8d-Bo-kD0"/>
-                            <constraint firstItem="Iaj-HS-7UZ" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="129" id="tcY-hA-9v8"/>
+                            <constraint firstItem="Y2t-0J-TaI" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Acd-qi-9Qs"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="xW5-0d-DWi" secondAttribute="bottom" id="Bj0-lI-mmR"/>
+                            <constraint firstItem="Y2t-0J-TaI" firstAttribute="centerY" secondItem="xW5-0d-DWi" secondAttribute="centerY" id="Lm4-nu-hFw"/>
+                            <constraint firstItem="JUT-c6-tgF" firstAttribute="leading" secondItem="Iaj-HS-7UZ" secondAttribute="trailing" constant="47" id="Q3c-MP-gby"/>
+                            <constraint firstItem="JUT-c6-tgF" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="VHS-d4-Uu6"/>
+                            <constraint firstItem="xW5-0d-DWi" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="XQY-o3-pJM"/>
+                            <constraint firstItem="xW5-0d-DWi" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="XxC-0u-VmD"/>
+                            <constraint firstItem="xW5-0d-DWi" firstAttribute="top" secondItem="Iaj-HS-7UZ" secondAttribute="bottom" constant="15" id="YbB-Jq-3Ty"/>
+                            <constraint firstItem="Iaj-HS-7UZ" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="kHs-el-7ZK"/>
+                            <constraint firstItem="JUT-c6-tgF" firstAttribute="bottom" secondItem="Iaj-HS-7UZ" secondAttribute="bottom" id="qIM-ar-9ev"/>
+                            <constraint firstItem="Iaj-HS-7UZ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="qUB-Qp-ofo"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -84,6 +99,50 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
+        </scene>
+        <!--All Pokemon View Controller-->
+        <scene sceneID="Fwe-3O-Rpl">
+            <objects>
+                <viewController id="nrM-yV-Nml" customClass="allPokemonViewController" customModule="pokiman" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2pa-cf-5tA">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="MgE-d9-PFm">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="pokemonCell" id="xK3-mq-Lzi">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="xK3-mq-Lzi" id="WPF-jj-9kl">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="nrM-yV-Nml" id="lx0-IT-Bpc"/>
+                                    <outlet property="delegate" destination="nrM-yV-Nml" id="yZL-ko-E3a"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="MgE-d9-PFm" firstAttribute="top" secondItem="NaR-Pu-jhh" secondAttribute="top" id="CDc-Bg-YTJ"/>
+                            <constraint firstItem="NaR-Pu-jhh" firstAttribute="trailing" secondItem="MgE-d9-PFm" secondAttribute="trailing" id="hWw-bn-3Mv"/>
+                            <constraint firstItem="MgE-d9-PFm" firstAttribute="leading" secondItem="NaR-Pu-jhh" secondAttribute="leading" id="ulD-Vc-1D8"/>
+                            <constraint firstItem="NaR-Pu-jhh" firstAttribute="bottom" secondItem="MgE-d9-PFm" secondAttribute="bottom" id="xfw-po-X3D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="NaR-Pu-jhh"/>
+                    </view>
+                    <connections>
+                        <outlet property="tableView" destination="MgE-d9-PFm" id="Sh4-lF-vjf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3Cs-c2-aa9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="943" y="134"/>
         </scene>
     </scenes>
 </document>
